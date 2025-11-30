@@ -8,13 +8,13 @@ def generate_sub_tasks():
     This task waits 100 minutes then generates 200 sub-tasks.
     """
     print("Parent task started. Waiting 100 minutes...")
-    time.sleep(100 * 60)  # 100 mins
+    time.sleep(100)  # 100 mins
 
-    print("Generating 200 child tasks...")
-    for i in range(200):
+    print("Generating 1000 child tasks...")
+    for i in range(1000):
         child_task.delay(i)
 
-    return "Created 200 tasks successfully"
+    return "Created 1000 tasks successfully"
 
 
 @shared_task
